@@ -70,6 +70,8 @@ void loop() {
             if(transmittingData){
                 // Short publish names save data!
                 Particle.publish("G", t.readLatLon(), 60, PRIVATE);
+                Particle.publish("S", t.readspeed(), 60, PRIVATE);
+                Particle.publish("A", t.readaltitude(), 60, PRIVATE);
             }
             // but always report the data over serial for local development
             Serial.println(t.readLatLon());
