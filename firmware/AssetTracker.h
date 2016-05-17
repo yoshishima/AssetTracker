@@ -22,16 +22,16 @@ class AssetTracker {
     readXYZmagnitude(void);
   float
     readLat(void),
-    readLon(void),
-    readaltitude(void),
-    readspeed(void);
+    readLon(void);
   bool
     gpsFix(void);
   char
     checkGPS(void),
     *preNMEA(void);
   String
-    readLatLon(void);
+    readLatLon(void),
+    readAltitude(void),
+    readSpeed(void);
  private:
 
 };
