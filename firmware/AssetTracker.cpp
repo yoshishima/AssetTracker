@@ -33,17 +33,19 @@ float AssetTracker::readLon(){
     return gps.longitude;
 }
 
-float AssetTracker::readaltitude(){
-	return gps.altitude;
-}
-
-float AssetTracker::readspeed(){
-	return gps.speed;
-}
-
 String AssetTracker::readLatLon(){
     String latLon = String::format("%f,%f",gps.latitudeDegrees,gps.longitudeDegrees);
     return latLon;
+}
+
+String AssetTracker::readAltitude(){
+    String Altitude = String::format("%f",gps.altitude);
+    return Altitude;
+}
+
+String AssetTracker::readSpeed(){
+    String Speed = String::format("%f",gps.speed);
+    return Speed;
 }
 
 void AssetTracker::gpsOn(){
