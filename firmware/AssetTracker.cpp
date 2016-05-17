@@ -39,12 +39,12 @@ String AssetTracker::readLatLon(){
 }
 
 String AssetTracker::readAltitude(){
-    String Altitude = String::format(gps.altitude);
+    String Altitude = String(gps.altitude);
     return Altitude;
 }
 
 String AssetTracker::readSpeed(){
-    String Speed = String::format(gps.speed);
+    String Speed = String(gps.speed);
     return Speed;
 }
 
